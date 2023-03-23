@@ -8,10 +8,10 @@ function Navbar() {
 
   return (
     <>
-      <div className="relative w-full flex justify-between items-center px-10 md:px-20 py-4 bg-white shadow-md">
+      <div className="relative w-full flex justify-between items-center px-6 md:px-20 py-4 bg-white shadow-md">
         <button className="text-lg font-medium">Olinarom</button>
 
-        <div className="w-fit hidden md:flex justify-center items-center gap-10">
+        <div className="w-fit hidden md:flex justify-center items-center gap-5 lg:gap-10">
           {menuBar?.map((menu, index) => (
             <button
               key={index}
