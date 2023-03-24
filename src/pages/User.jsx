@@ -1,7 +1,16 @@
 import React from "react";
 
-function User() {
-  return <div>User</div>;
+function User({ token, setToken }) {
+  const handleLogout = () => {
+    setToken("");
+    localStorage.clear();
+  };
+
+  return (
+    <div>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  );
 }
 
 export default User;

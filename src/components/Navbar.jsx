@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoCloseOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,10 +22,12 @@ function Navbar() {
             </button>
           ))}
         </div>
+        <Link to="/login">
+          <button className="hidden md:block px-4 py-2 rounded-full bg-black text-white text-sm">
+            Login/Register
+          </button>
+        </Link>
 
-        <button className="hidden md:block px-4 py-2 rounded-full bg-black text-white text-sm">
-          Login/Register
-        </button>
         <button onClick={() => setOpen(true)} className="block md:hidden ">
           <HiOutlineMenu />
         </button>
@@ -54,9 +57,11 @@ function Navbar() {
                 </button>
               ))}
             </div>
-            <button className="bg-black px-7 py-2 border border-black rounded-full font-medium text-white hover:bg-white hover:text-black">
-              Login/Register
-            </button>
+            <Link to="/login">
+              <button className="bg-black px-7 py-2 border border-black rounded-full font-medium text-white hover:bg-white hover:text-black">
+                Login/Register
+              </button>
+            </Link>
           </div>
         </>
       )}
